@@ -1,49 +1,40 @@
 # Stock Market Performance Analysis
 
-## Project Overview
+Comparing the performance and volatility of five large-cap stocks across
+three sectors: tech (AAPL, MSFT, NVDA), financials (JPM), and consumer
+staples (KO).
 
-This project analyzes historical stock market data to compare the performance and volatility of selected companies.
+## Data
+Daily prices for Oct 2025 to Oct 2026, stored in `data/`. Returns are
+calculated from adjusted close prices, which account for dividends and splits.
 
-The goal is to use financial mathematics, statistical analysis, and data tools to identify trends and communicate meaningful findings.
+## Methods
+- Daily returns and cumulative returns
+- Annualized volatility (daily standard deviation x √252)
+- Return per unit of risk (total return / volatility)
 
-## Objectives
+Tools: Python, pandas, matplotlib, Jupyter
 
-* Compare stock price performance across multiple companies.
-* Calculate daily and cumulative returns.
-* Measure volatility using standard deviation.
-* Identify trends and significant price movements.
-* Present findings using data visualizations.
+## Key Findings
+| Stock | Total return | Annual volatility | Return per unit of risk |
+|---|---|---|---|
+| KO | 32.9% | 18.8% | 1.75 |
+| AAPL | 29.8% | 24.7% | 1.21 |
+| NVDA | 23.0% | 37.7% | 0.61 |
+| JPM | 7.1% | 22.6% | 0.31 |
+| MSFT | 0.6% | 32.8% | 0.02 |
 
-## Tools
+- KO delivered the best return with the lowest volatility, making it the
+  strongest risk-adjusted performer.
+- NVDA was the most volatile stock, and the extra risk was not rewarded
+  over this period.
+- MSFT was nearly flat for the year despite high volatility.
+- This covers only one year of data, so these are observations about the
+  period, not predictions.
 
-* Excel
-* SQL
-* GitHub
+## Full Analysis
+See [stock_analysis.ipynb](stock_analysis.ipynb) for the code, charts, and
+tables.
 
-## Dataset
-
-Historical stock market data will be used for the selected companies.
-
-The dataset and its source will be documented here.
-
-## Analysis
-
-This section will include:
-
-* Data cleaning
-* Return calculations
-* Statistical analysis
-* Company comparisons
-* Visualizations
-
-## Findings
-
-Findings will be added after completing the analysis.
-
-## Conclusion
-
-The project will summarize the observed stock performance patterns, compare historical returns and volatility, and discuss limitations of the analysis.
-
-## Author
-
-Samuel Ridgeway
+## How to Run
+pip install -r requirements.txt, then open the notebook in Jupyter.
